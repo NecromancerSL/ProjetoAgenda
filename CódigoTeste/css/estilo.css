@@ -1,4 +1,4 @@
-.titulo{
+.titulo {
     color: black;
     text-align: center;
 }
@@ -15,10 +15,10 @@
 }
 
 .botao {
-    width: 100%;   
+    width: 100%;
 }
 
-.botaolimpar{
+.botaolimpar {
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -30,7 +30,7 @@
 }
 
 .background {
-    border: 1px ;
+    border: 1px;
     border-style: solid;
     border-color: darkgrey;
     border-radius: 10px;
@@ -41,10 +41,14 @@
     color: red;
 }
 
-a .cadastroLink{
+a .cadastroLink {
     background-color: green;
 }
 
-.table{
+li {
+    list-style-type: none;
+}
+
+table {
     text-align: center;
 }

@@ -1,31 +1,22 @@
 <?php
-//ter conexão com o bd
-include "db.php"; //tipo import
+include "db.php";
 
-$email=$_POST["email"]; //esta vindo de um post
-$senha=$_POST["senha"]; //chama a senha pelo post(no form)
+$email=$_POST["email"];
+$senha=$_POST["senha"];
 $nome=$_POST["nome"];
 $dataNascimento=$_POST["dataNascimento"];
 
-
-//consultar no banco
-
-//$query="INSERT INTO usuario WHERE usu_email='$email' AND usu_senha='$senha' ";
-
 $query="insert into usuario(usuarioEmail,usuarioSenha,usuarioNome,usuarioDataNascimento) values('$email','$senha','$nome','$dataNascimento')";
 
-$consulta=mysqli_query($conexao,$query);//a função executa uma consulta no banco, e para fazer isso precisada conexão e a consulta que quer executar
+$consulta=mysqli_query($conexao,$query);
 
-if(mysqli_query($conexao,$query)){//função que retorna o numero de linhas
+if(mysqli_query($conexao,$query)){
 
-    $row = mysqli_fetch_array($consulta);//traz um array de valores da consulta
-
-    header("location: cadastro.php");//função de direcionamento
+    header("location: login.php");
 
 }else{
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    header("location: cadastro.php?erro");//?= passa um paramentro
-
+    header("location: cadastro_formulario.php?erro");
 }
 
 mysqli_close($conexao);
