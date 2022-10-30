@@ -1,3 +1,5 @@
+create database grupo2;
+
 create table usuario(
 	usuarioID int not null primary key auto_increment,
 	usuarioEmail varchar(50),
