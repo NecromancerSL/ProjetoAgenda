@@ -20,7 +20,7 @@
 
                         <h1 class="titulo" id="texto">cadastro de usuário</h1>
 
-                        <form method="post" action="cadastro_formulario.php">                    
+                        <form method="post" action="cadastrar.php">                    
 
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">E-mail</label>

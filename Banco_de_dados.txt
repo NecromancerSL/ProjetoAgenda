@@ -4,9 +4,9 @@ create table usuario(
 	usuarioID int not null primary key auto_increment,
 	usuarioEmail varchar(50),
 	usuarioSenha varchar(30),
-	usuarioNome varchar(50)
-	usuarioDataNasciment date
-)
+	usuarioNome varchar(50),
+	usuarioDataNascimento date
+);
 
 create table agendamento(
 	agendamentoID int not null primary key auto_increment,

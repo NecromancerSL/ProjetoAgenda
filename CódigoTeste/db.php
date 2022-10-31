@@ -15,7 +15,7 @@ $usuario="root";//padrao maria db entre outros
 $senha="";//padra deixar vazio
 
 //Banco de Dados
-$db="Grupo2";//apontar para o bando de dados
+$db="grupo2";//apontar para o bando de dados
 
 
 //Conexão
