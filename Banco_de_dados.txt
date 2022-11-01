@@ -9,7 +9,7 @@ create table usuario(
 );
 
 create table agendamento(
-	agendamentoID int not null primary key auto_increment,
+	ID int not null primary key auto_increment,
 	title varchar(100),
 	color varchar(10),
 	start datetime,
