@@ -8,14 +8,13 @@ $dataNascimento=$_POST["dataNascimento"];
 
 $query="insert into usuario(usuarioEmail,usuarioSenha,usuarioNome,usuarioDataNascimento) values('$email','$senha','$nome','$dataNascimento')";
 
-$consulta=mysqli_query($conexao,$query);
-
-
-
+if ($conexao->query($query) === TRUE) {
     header("location: login.php");
-
-
+} else {
+    echo "Error";
+}
 
 mysqli_close($conexao);
+
 
 ?>
