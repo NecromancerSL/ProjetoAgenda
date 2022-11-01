@@ -7,7 +7,11 @@ $id = filter_input(INPUT_GET,"id",FILTER_SANITIZE_NUMBER_INT);
 
 if(isset($_POST['deletar'])) {
     $deletar="delete from agendamento where id=$id";
-    $consulta=mysqli_query($conexao,$deletar);
+    if ($conexao->query($deletar) === TRUE) {
+        header("location: agendamentos.php");
+    } else {
+        echo "Error";
+    } 
 }
 
 
@@ -23,8 +27,11 @@ if(isset($_POST['editar'])) {
 
     
     $query="UPDATE agendamento set title = '$agendaTitulo', color = '$agendaCor', start='$agendaInicial', end='$agendaFinal' where id=$id";
-    $consulta=mysqli_query($conexao,$query);
-    header("location: agendamentos.php");
+    if ($conexao->query($query) === TRUE) {
+        header("location: agendamentos.php");
+    } else {
+        echo "Error";
+    } 
 }
 
 
