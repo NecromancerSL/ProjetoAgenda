@@ -9,7 +9,7 @@ $dataNascimento=$_POST["dataNascimento"];
 $query="insert into usuario(usuarioEmail,usuarioSenha,usuarioNome,usuarioDataNascimento) values('$email','$senha','$nome','$dataNascimento')";
 
 if ($conexao->query($query) === TRUE) {
-    header("location: login.php");
+    header("location: index.php");
 } else {
     echo "Error";
 }
