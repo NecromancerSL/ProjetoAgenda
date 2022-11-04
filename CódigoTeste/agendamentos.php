@@ -14,8 +14,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">Olá, <?php session_start();
-                                            echo $_SESSION["nomeusuario"]; ?></a>
+      <a class="navbar-brand" href="">Olá, <?php session_start();echo $_SESSION["nomeusuario"]; ?></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -54,21 +53,20 @@
             $query_envents = "select id,title,color,start,end from agendamento where usuarioID=" . $usuID;
             $resultado = mysqli_query($conexao, $query_envents);
             while ($row_events = $resultado->fetch_array()) {
-              
+              $id= $row_events['id'];
               $title = $row_events['title'];
               $color = $row_events['color'];
               $start = $row_events['start'];
               $end = $row_events['end'];
-              $id= $row_events['id'];
-
-              echo "<form method='post' action='deletar_atualizar.php?id=$id'>";
+              
+              
               echo "<tr><td>$title</td> <td style='background-color:$color ;'></td> <td>".date('d/m/Y H:i:s', strtotime($start))."</td> <td>".date('d/m/Y H:i:s', strtotime($end))."</td>";
-              echo "<td><input id='$id' type='submit' name='encaminhar'class='btn btn-primary' value='Editar' /><input id='$id' type='submit' name='deletar'class='btn btn-danger' value='Deletar' /></td></tr>";
+              echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-primary'>Editar</a><a href='deletar.php?id=$id'class='btn btn-danger'>Apagar</a></td></tr>";
             }
             
             mysqli_close($conexao);
             ?>
-            </form>
+
         </table>
       </div>
       <div class="mb-3">

@@ -13,8 +13,7 @@
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">Olá, <?php session_start();
-                                            echo $_SESSION["nomeusuario"]; ?></a>
+      <a class="navbar-brand" href="">Olá, <?php session_start();echo $_SESSION["nomeusuario"]; ?></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,13 +42,13 @@
                             $id = filter_input(INPUT_GET,"id",FILTER_SANITIZE_NUMBER_INT);
                             $query="select title,color,start,end from agendamento where id=" . $id;
                             $resultado = mysqli_query($conexao, $query);
-                            mysqli_close($conexao);
-                            while ($row_events = $resultado->fetch_array()) {
-                                $title = $row_events['title'];
-                                $color = $row_events['color'];
-                                $start = $row_events['start'];
-                                $end = $row_events['end'];
-                            }
+                            
+                            $row_events=mysqli_fetch_assoc($resultado);        
+                            mysqli_close($conexao);                    
+                            $title = $row_events['title'];
+                            $color = $row_events['color'];
+                            $start = $row_events['start'];
+                            $end = $row_events['end'];
                            echo "<form method='post' action='deletar_atualizar.php?id=$id'>";
                         ?>                 
                         <div class="mb-3">
@@ -60,10 +59,10 @@
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Cor</label>
                             <select class="form-select"aria-label="Default select example" value="<?php echo $color ?>" name="agendaCor" id="cor">
-                                <option value="blue">Azul</option>
-                                <option value="red">Vermelho</option>
-                                <option value="yellow">Amarelo</option>
-                                <option value="green">Verde</option>
+                                <option value="blue "<?=($color == 'blue')? 'selected' : ''?>>Azul</option>
+                                <option value="red"<?=($color == 'red')? 'selected' : ''?>>Vermelho</option>
+                                <option value="yellow"<?=($color == 'yellow')? 'selected' : ''?>>Amarelo</option>
+                                <option value="green"<?=($color == 'green')? 'selected' : ''?>>Verde</option>
                             </select>
                         </div>
 

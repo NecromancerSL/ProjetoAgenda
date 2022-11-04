@@ -6,7 +6,7 @@ include "db.php"; //tipo import
 
 $email=$_POST["email"]; //esta vindo de um post
 $senha=$_POST["senha"]; //chama a senha pelo post(no form)
-
+$cont = 0;
 //consultar no banco
 
 $query="SELECT*FROM usuario WHERE usuarioEmail='$email' AND usuarioSenha='$senha' ";
@@ -22,9 +22,7 @@ if(mysqli_num_rows($consulta)==1){//função que retorna o numero de linhas
     header("location: home.php");
 
 }else{
-
     header("location: index.php?erro");
-    mysqli_close($conexao);
-
 }
+mysqli_close($conexao);
 ?>
