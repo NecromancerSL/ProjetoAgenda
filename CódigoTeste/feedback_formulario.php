@@ -100,7 +100,7 @@
                             class="fab fa-linkedin-in"></i></a>
 
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
                 </section>
                 <section class="mb-4">

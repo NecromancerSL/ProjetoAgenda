@@ -66,7 +66,7 @@
               $end = $row_events['end'];
               
               
-              echo "<tr><td>$title</td> <td style='background-color:$color ;'></td> <td>".date('d/m/Y H:i:s', strtotime($start))."</td> <td>".date('d/m/Y H:i:s', strtotime($end))."</td>";
+              echo "<tr><td>$title</td> <td style='background-color:$color ;'></td> <td>".date('d/m/Y H:i', strtotime($start))."</td> <td>".date('d/m/Y H:i', strtotime($end))."</td>";
               echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-primary'>Editar</a><a href='deletar.php?id=$id'class='btn btn-danger'>Apagar</a></td></tr>";
             }
             
@@ -108,7 +108,7 @@
                             class="fab fa-linkedin-in"></i></a>
 
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
                 </section>
                 <section class="mb-4">
