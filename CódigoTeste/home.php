@@ -8,7 +8,8 @@
     <script src='js/fullcalendar/main.js'></script>
     <script src='js/fullcalendar/locales/pt-br.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href='css/fullcalendar/main.css' rel='stylesheet' />
+    <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
+    <link href='css/fullcalendar/main.css' rel='stylesheet'/>
     <link rel="stylesheet" href="css/estilo.css">
     <title>Home</title>
     <script>
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </head>
 
 <body>
-
+  <a name="topo">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Olá, <?php session_start();  echo $_SESSION["nomeusuario"];?></a><!-- coloca php, no caso cham a variavel de sessão nomeusuario, é interessante usar a variavel de sessão para segurança(separar um usuario,gerente,desenvolvedor,etc)-->
@@ -53,13 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
               </li>
             </ul>
-            <form class="d-flex">            
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
-
   <div class="container">
     <h1 class="titulo" id="texto">Calendario</h1>
     <div id='calendar'>
@@ -69,6 +66,66 @@ document.addEventListener('DOMContentLoaded', function() {
       <a href="agendamentos.php"><button  type="submit" class="btn btn-primary botao">Agendamentos</button> </a>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <section class="mb-4">
+      <p>
+        Site criado como projeto de faculdade
+      </p>
+    </section>
+    <section class="">
+      <div class="row">
+        <div class="mb-4">
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#topo" class="text-white">Voltar para o Topo</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Enviar Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright: <a class="text-white" href="#">Grupo 2</a>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
