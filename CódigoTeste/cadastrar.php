@@ -17,6 +17,4 @@ if ($conexao->query($query) === TRUE) {
     header("location: cadastro_formulario?erro");
 }
 mysqli_close($conexao);
-
-
 ?>
