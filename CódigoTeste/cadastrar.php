@@ -14,7 +14,7 @@ $query="insert into usuario(usuarioEmail,usuarioSenha,usuarioNome,usuarioDataNas
 if ($conexao->query($query) === TRUE) {
     header("location: index");
 } else {
-    header("location: cadastro_formulario?erro");
+    header("location: cadastro_formulario?erro=1");
 }
 mysqli_close($conexao);
 ?>

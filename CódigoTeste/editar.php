@@ -11,7 +11,7 @@
         $agendaFinal=$_POST["agendaFinal"];
         $query="UPDATE agendamento set title = '$agendaTitulo', color = '$agendaCor', start='$agendaInicial', end='$agendaFinal' where id=$id";
         if ($conexao->query($query) === TRUE) {
-            header("location: agendamentos.php");
+            header("location: home.php");
         } else {
             echo "Error";
         }

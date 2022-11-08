@@ -40,7 +40,7 @@
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Nome</label>
                         <input type="text" class="form-control inputvalor" name="nome" id="nome"
-                            placeholder="Digite sua senha" required>
+                            placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="mb-3">
@@ -53,7 +53,12 @@
                         <button type="submit" class="btn btn-primary botao" id="btnacessar">Cadastrar</button>
                     </div>
 
-                    <h6 class="alerta" id="alerta"></h6>
+                    <h6 class="alerta" id="alerta">
+                        <?php $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                        if($erro==1){
+                            echo "Data Inválida";
+                        }?>
+                    </h6>
 
                 </form>
                 <div class="mb-3">

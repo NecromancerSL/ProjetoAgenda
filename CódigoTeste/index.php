@@ -38,11 +38,17 @@
                         <button type="submit" class="btn btn-primary botao" id="btnacessar">Acessar</button>
                     </div>
 
+                    <h6 class="alerta" id="alerta">
+                        <?php $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                        if($erro==1){
+                            echo "Email ou Senha incorreta";
+                        }?>
+                    </h6>
+
                     <div class="mb-3">
                         <a id="cadastroLink" href="cadastro_formulario.php">Inscrever-se</a>
                     </div>
-
-                    <h6 class="alerta" id="alerta"></h6>
+                    
 
                 </form>
 

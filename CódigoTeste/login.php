@@ -22,7 +22,7 @@ if(mysqli_num_rows($consulta)==1){//função que retorna o numero de linhas
     header("location: home.php");
 
 }else{
-    header("location: index.php?erro");
+    header("location: index.php?erro=1");
 }
 mysqli_close($conexao);
 ?>

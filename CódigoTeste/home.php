@@ -27,7 +27,11 @@
             locale: 'pt-br',
             editable: true,
             dayMaxEvents: true,
-            events: 'calendario.php'
+            events: 'calendario.php',
+            eventClick: function(info) {
+            var eventObj = info.event;
+                window.location.href = "agendamento_formulario_editar.php?id="+eventObj.id;
+            }
         });
 
         calendar.render();
