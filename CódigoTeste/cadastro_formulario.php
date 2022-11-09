@@ -35,6 +35,7 @@
                         <label for="formGroupExampleInput" class="form-label">Senha</label>
                         <input type="password" class="form-control inputvalor" name="senha" id="senha"
                             placeholder="Digite sua senha" required>
+                        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="mb-3">
@@ -69,7 +70,7 @@
         </div>
 
     </div>
-
+    <script src=js/cadastro.js></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>

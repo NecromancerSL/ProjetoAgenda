@@ -22,6 +22,7 @@
         $dataNascimento=$_POST["dataNascimento"];
         $query="UPDATE usuario set usuarioEmail = '$email', usuarioNome = '$nome', usuarioDataNascimento='$dataNascimento' where usuarioid=$id";
         if ($conexao->query($query) === TRUE) {
+            $_SESSION["nomeusuario"]="$nome";
             header("location: home.php");
         } else {
             echo "Error";
