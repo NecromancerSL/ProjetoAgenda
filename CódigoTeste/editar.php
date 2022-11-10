@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "db.php";
     $id = filter_input(INPUT_GET,"id",FILTER_SANITIZE_NUMBER_INT);
     

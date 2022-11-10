@@ -70,6 +70,13 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Senha</label>
+                        <input type="password" class="form-control inputvalor" name="senha" id="senha"
+                            placeholder="Digite sua senha" required>
+                        <input type="checkbox" onclick="myFunction()">Show Password
+                    </div>
+
+                    <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Data de Nascimento</label>
                         <input type="date" class="form-control inputvalor" value="<?php echo $dataNascimento ?>"
                             name="dataNascimento" id="dataNascimento" required>
@@ -141,6 +148,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
+        <script src="js/cadastro.js"></script>
 
 </body>
 
