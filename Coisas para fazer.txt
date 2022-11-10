@@ -3,7 +3,7 @@ Problemas:
 
 cadastro:
 
-- estilizar o botão de visualizar senha
+- estilizar o botão de visualizar senha 🆗
 
 - arrumar a formatação da data
 
@@ -11,7 +11,7 @@ cadastro:
 
 login:
 
-- adicionar o botao de visualização
+- adicionar o botao de visualização 🆗
 
 - melhorar o inscrever-se
 
