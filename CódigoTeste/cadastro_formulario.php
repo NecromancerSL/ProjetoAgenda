@@ -35,7 +35,7 @@
                         <label for="formGroupExampleInput" class="form-label">Senha</label>
                         <input type="password" class="form-control inputvalor" name="senha" id="senha"
                             placeholder="Digite sua senha" required>
-                        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                        <input type="checkbox" onclick="myFunction()">Show Password
                     </div>
 
                     <div class="mb-3">
