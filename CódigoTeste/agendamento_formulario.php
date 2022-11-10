@@ -60,9 +60,10 @@
                             <label for="formGroupExampleInput" class="form-label">Cor</label>
                             <select class="form-select" aria-label="Default select example" name="agendaCor" id="cor">
                                 <option value="blue" selected>Azul</option>
-                                <option value="red">Vermelho</option>
-                                <option value="yellow">Amarelo</option>
                                 <option value="green">Verde</option>
+                                <option value="yellow">Amarelo</option>
+                                <option value="red">Vermelho</option>
+
                             </select>
                         </div>
 

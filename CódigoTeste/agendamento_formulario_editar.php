@@ -70,9 +70,10 @@
                         <select class="form-select" aria-label="Default select example" value="<?php echo $color ?>"
                             name="agendaCor" id="cor">
                             <option value="blue " <?=($color == 'blue')? 'selected' : ''?>>Azul</option>
-                            <option value="red" <?=($color == 'red')? 'selected' : ''?>>Vermelho</option>
-                            <option value="yellow" <?=($color == 'yellow')? 'selected' : ''?>>Amarelo</option>
                             <option value="green" <?=($color == 'green')? 'selected' : ''?>>Verde</option>
+                            <option value="yellow" <?=($color == 'yellow')? 'selected' : ''?>>Amarelo</option>
+                            <option value="red" <?=($color == 'red')? 'selected' : ''?>>Vermelho</option>
+
                         </select>
                     </div>
 
