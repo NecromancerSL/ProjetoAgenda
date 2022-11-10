@@ -1,0 +1,62 @@
+Problemas:
+
+
+cadastro:
+
+- estilizar o botão de visualizar senha
+
+- arrumar a formatação da data
+
+-----------------------------------------------------------------
+
+login:
+
+- adicionar o botao de visualização
+
+- melhorar o inscrever-se
+
+-----------------------------------------------------------------
+
+Home:
+
+- modificar o botão de anterior e proximo
+
+- alterar algumas coisas do rodapé
+
+-----------------------------------------------------------------
+
+perfil editar:
+
+- botão de mostrar senha
+
+- arrumar a data
+
+- melhorar a aparencia
+
+----------------------------------------------------------------
+
+agendamentos:
+
+- ordem das cores 
+
+- paginação
+
+- nova coluna que fala a comunidade
+
+-----------------------------------------------------------------
+
+formulario de agendamentos:
+
+- arrumar a parte da data
+
+- colocar uma parse de situação dentro de cada cor
+
+- arrumar a ordem
+
+------------------------------------------------------------------
+
+opcional:
+
+- tutorial
+
+- tabelinha das cores
