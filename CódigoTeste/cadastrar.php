@@ -5,7 +5,6 @@ $email=$_POST["email"];
 $senha=md5($_POST["senha"]);
 $nome=$_POST["nome"];
 $dataNascimento=$_POST["dataNascimento"];
-$data = explode( '/',$dataNascimento);
 
 $query="insert into usuario(usuarioEmail,usuarioSenha,usuarioNome,usuarioDataNascimento) values('$email','$senha','$nome','$dataNascimento')";
 
