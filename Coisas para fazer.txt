@@ -5,7 +5,7 @@ cadastro:
 
 - estilizar o botão de visualizar senha 🆗
 
-- arrumar a formatação da data
+- arrumar a formatação da data 🆗
 
 -----------------------------------------------------------------
 
@@ -29,7 +29,7 @@ perfil editar:
 
 - botão de mostrar senha
 
-- arrumar a data
+- arrumar a data 🆗
 
 - melhorar a aparencia
 
@@ -47,7 +47,7 @@ agendamentos:
 
 formulario de agendamentos:
 
-- arrumar a parte da data
+- arrumar a parte da data 🆗
 
 - colocar uma parse de situação dentro de cada cor
 

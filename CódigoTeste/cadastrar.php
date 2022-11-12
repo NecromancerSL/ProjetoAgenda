@@ -2,7 +2,7 @@
 include "db.php";
 
 $email=$_POST["email"];
-$senha=$_POST["senha"];
+$senha=md5($_POST["senha"]);
 $nome=$_POST["nome"];
 $dataNascimento=$_POST["dataNascimento"];
 $data = explode( '/',$dataNascimento);

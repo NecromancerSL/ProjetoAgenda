@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<?php include "verificar.php";?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand"
-                    href="">Olá, <?php session_start();  echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                    href="">Olá, <?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <li class="nav-item active">
-                        <a class=" btn btn-danger" href="index.php">Sair <span class="sr-only"></span></a>
+                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
                     </li>
                 </div>
             </div>
@@ -73,12 +73,13 @@
                         <label for="formGroupExampleInput" class="form-label">Senha</label>
                         <input type="password" class="form-control inputvalor" name="senha" id="senha"
                             placeholder="Digite sua senha" required>
-                        <input type="checkbox" onclick="myFunction()">Show Password
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault" onclick="myFunction()">
+                        <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
                     </div>
 
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Data de Nascimento</label>
-                        <input type="date" class="form-control inputvalor" value="<?php echo $dataNascimento ?>"
+                        <input type="date" min='1900-12-31' max='9999-12-31' class="form-control inputvalor" value="<?php echo $dataNascimento ?>"
                             name="dataNascimento" id="dataNascimento" required>
                     </div>
 

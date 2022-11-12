@@ -35,7 +35,8 @@
                         <label for="formGroupExampleInput" class="form-label">Senha</label>
                         <input type="password" class="form-control inputvalor" name="senha" id="senha"
                             placeholder="Digite sua senha" required>
-                        <input type="checkbox" onclick="myFunction()">Show Password
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault" onclick="myFunction()">
+                        <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
                     </div>
 
                     <div class="mb-3">
@@ -46,8 +47,8 @@
 
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Data de Nascimento</label>
-                        <input type="date" class="form-control inputvalor" name="dataNascimento" id="dataNascimento"
-                            placeholder="Digite sua senha" required>
+                        <input type="date" min='1900-12-31' max='9999-12-31' class="form-control inputvalor"
+                            name="dataNascimento" id="dataNascimento" placeholder="Digite sua senha" required>
                     </div>
 
                     <div class="mb-3">
@@ -57,7 +58,7 @@
                     <h6 class="alerta" id="alerta">
                         <?php $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
                         if($erro==1){
-                            echo "Data Inválida";
+                            echo "Erro";
                         }?>
                     </h6>
 

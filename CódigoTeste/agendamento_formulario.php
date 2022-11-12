@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<?php include "verificar.php";?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="perfil.php">Olá,
-                    <?php session_start();  echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                    <?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <li class="nav-item active">
-                        <a class=" btn btn-danger" href="index.php">Sair <span class="sr-only"></span></a>
+                    <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
                     </li>
                 </div>
             </div>
@@ -69,13 +69,13 @@
 
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Data de Início</label>
-                            <input type="datetime-local" class="form-control inputvalor" name="agendaInicial"
+                            <input type="datetime-local" min='1900-12-31' max='9999-12-31' class="form-control inputvalor" name="agendaInicial"
                                 id="inicial" placeholder="Digite a data inicial" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Data de Termino</label>
-                            <input type="datetime-local" class="form-control inputvalor" name="agendaFinal" id="final"
+                            <input type="datetime-local" min='1900-12-31' max='9999-12-31' class="form-control inputvalor" name="agendaFinal" id="final"
                                 placeholder="Digite a data final" required>
                         </div>
 

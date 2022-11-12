@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<?php include "verificar.php";?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,7 +46,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="perfil.php">Olá,
-                    <?php session_start();  echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                    <?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <!-- coloca php, no caso cham a variavel de sessão nomeusuario, é interessante usar a variavel de sessão para segurança(separar um usuario,gerente,desenvolvedor,etc)-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -63,7 +63,7 @@
                         </li>
                     </ul>
                     <li class="nav-item active">
-                        <a class=" btn btn-danger" href="index.php">Sair <span class="sr-only"></span></a>
+                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
                     </li>
                 </div>
             </div>

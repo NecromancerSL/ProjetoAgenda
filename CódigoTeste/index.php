@@ -32,7 +32,8 @@
                         <label for="formGroupExampleInput" class="form-label">Senha</label>
                         <input type="password" class="form-control inputvalor" name="senha" id="senha"
                             placeholder="Digite sua senha" required>
-                        <input type="checkbox" onclick="myFunction()">Show Password
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault" onclick="myFunction()">
+                        <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
                     </div>
 
                     <div class="mb-3">
@@ -49,7 +50,7 @@
                     <div class="mb-3">
                         <a id="cadastroLink" href="cadastro_formulario.php">Inscrever-se</a>
                     </div>
-                    
+
 
                 </form>
 
