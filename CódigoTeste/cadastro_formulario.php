@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary botao" id="btnacessar">Cadastrar</button>
+                        <button type="submit" class="btn btn-dark botao" id="btnacessar">Cadastrar</button>
                     </div>
 
                     <h6 class="alerta" id="alerta">

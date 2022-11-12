@@ -67,7 +67,7 @@
               
               
               echo "<tr><td>$title</td> <td style='background-color:$color ;'></td> <td>".date('d/m/Y H:i', strtotime($start))."</td> <td>".date('d/m/Y H:i', strtotime($end))."</td>";
-              echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-primary'>Editar</a><a href='deletar.php?id=$id'class='btn btn-danger'>Apagar</a></td></tr>";
+              echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-info'>Editar</a><a href='deletar.php?id=$id'class='btn btn-danger'>Apagar</a></td></tr>";
             }
             
             mysqli_close($conexao);
@@ -77,7 +77,7 @@
                 </div>
                 <div class="mb-3">
                     <a href="agendamento_formulario.php">
-                        <button type="button" class="btn btn-success botao">Agendar</button>
+                        <button type="button" class="btn btn-dark botao">Agendar</button>
                     </a>
                 </div>
             </div>

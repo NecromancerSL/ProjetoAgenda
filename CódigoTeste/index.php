@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary botao" id="btnacessar">Acessar</button>
+                        <button type="submit" class="btn btn-dark botao" id="btnacessar">Acessar</button>
                     </div>
 
                     <h6 class="alerta" id="alerta">

@@ -59,11 +59,11 @@
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Cor</label>
                             <select class="form-select" aria-label="Default select example" name="agendaCor" id="cor">
-                                <option value="blue" selected>Azul</option>
-                                <option value="green">Verde</option>
-                                <option value="yellow">Amarelo</option>
-                                <option value="red">Vermelho</option>
-
+                                <option value="red" selected>Vermelho (Urgente)</option>
+                                <option value="yellow">Amarelo (Importante)</option>
+                                <option value="green">Verde (Desejável)</option>
+                                <option value="blue">Azul (Descartável)</option>
+                                
                             </select>
                         </div>
 
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary botao" id="btnacessar">Agendar</button>
+                            <button type="submit" class="btn btn-dark botao" id="btnacessar">Agendar</button>
                         </div>
 
                         <h6 class="alerta" id="alerta"></h6>

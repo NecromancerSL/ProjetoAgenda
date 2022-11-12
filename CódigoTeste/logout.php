@@ -10,8 +10,8 @@
             header("location: index.php");
             exit();
         }else {
-            echo "<a href='logout.php?token=".$token."'> <button class='btn btn-danger'>Confirmar logout </button></a> ";
-            echo "<button class='btn btn-primary' onclick='window.history.back()'>Cancelar logout </button>";      
+            echo "<a href='logout.php?token=".$token."'> <button class='btn btn-dark'>Sair </button></a> ";
+            echo "<button class='btn btn-danger' onclick='window.history.back()'>Cancelar </button>";      
         }
     ?>
 

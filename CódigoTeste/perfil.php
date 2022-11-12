@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <input type='submit' name='editar_perfil' class='btn btn-primary botao' value='Editar perfil' />
+                        <input type='submit' name='editar_perfil' class='btn btn-dark botao' value='Editar perfil' />
                     </div>
 
                     </form>

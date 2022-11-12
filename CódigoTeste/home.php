@@ -69,12 +69,13 @@
             </div>
         </nav>
         <div class="container p-4">
-            <h1 class="titulo" id="texto">Calendario</h1>
+            <h1 class="titulo" id="texto">Calendário</h1>
             <div id='calendar'>
 
             </div>
+            <br>
             <div class="row  justify-content-center align-items-center">
-                <a href="agendamentos.php"><button type="submit" class="btn btn-primary botao">Agendamentos</button>
+                <a href="agendamentos.php"><button type="submit" class="btn btn-dark botao">Agendamentos</button>
                 </a>
             </div>
         </div>

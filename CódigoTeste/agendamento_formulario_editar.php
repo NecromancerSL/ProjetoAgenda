@@ -69,10 +69,10 @@
                         <label for="formGroupExampleInput" class="form-label">Cor</label>
                         <select class="form-select" aria-label="Default select example" value="<?php echo $color ?>"
                             name="agendaCor" id="cor">
-                            <option value="blue " <?=($color == 'blue')? 'selected' : ''?>>Azul</option>
-                            <option value="green" <?=($color == 'green')? 'selected' : ''?>>Verde</option>
-                            <option value="yellow" <?=($color == 'yellow')? 'selected' : ''?>>Amarelo</option>
-                            <option value="red" <?=($color == 'red')? 'selected' : ''?>>Vermelho</option>
+                            <option value="red " <?=($color == 'red')? 'selected' : ''?>>Vermelho (Urgente)</option>
+                            <option value="yellow" <?=($color == 'yellow')? 'selected' : ''?>>Amarelo (Importante)</option>
+                            <option value="green" <?=($color == 'green')? 'selected' : ''?>>Verde (Desejável)</option>
+                            <option value="blue" <?=($color == 'blue')? 'selected' : ''?>>Azul (Descartável)</option>
 
                         </select>
                     </div>
@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <input id='$id' type='submit' name='editar' class='btn btn-primary botao' value='Editar' />
+                        <input id='$id' type='submit' name='editar' class='btn btn-dark botao' value='Editar' />
                     </div>
 
                     </form>
