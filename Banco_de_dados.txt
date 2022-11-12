@@ -3,7 +3,7 @@ create database grupo2;
 create table usuario(
 	usuarioID int not null primary key auto_increment,
 	usuarioEmail varchar(50) unique,
-	usuarioSenha varchar(30),
+	usuarioSenha varchar(200),
 	usuarioNome varchar(50),
 	usuarioDataNascimento date
 );
