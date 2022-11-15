@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo.css">
     
-    <title>Editar</title>
+    <title></title>
 </head>
 
 <body>

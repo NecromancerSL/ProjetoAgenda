@@ -18,9 +18,12 @@
         }
         
    } else if(isset($_POST["editar_perfil"])){
-        $img_nome = "imagem_user$id.png";
-        $dir = 'imagens/perfil/';
-        move_uploaded_file($_FILES['imagem']['tmp_name'], $dir.$img_nome);
+        $imagem = $_FILES["imagem"];
+            if($imagem != NULL) {
+            $img_nome = "imagem_user$id.png";
+            $dir = 'imagens/perfil/';
+            move_uploaded_file($_FILES['imagem']['tmp_name'], $dir.$img_nome);
+        }
         $nome=$_POST["nome"];
         $email=$_POST["email"];
         $dataNascimento=$_POST["dataNascimento"];

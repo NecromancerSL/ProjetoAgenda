@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo.css">
 
-    <title>cadastro</title>
+    <title>Agendar</title>
 </head>
 
 <body>
@@ -108,6 +108,7 @@
                     <!-- Github -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
+                </section>
                 <section class="mb-4">
                     <p>
                         Site criado como projeto de faculdade

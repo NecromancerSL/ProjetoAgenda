@@ -98,6 +98,7 @@
                     <!-- Github -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
+                </section>
                 <section class="mb-4">
                     <p>
                         Site criado como projeto de faculdade

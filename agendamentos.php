@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo.css">
 
-    <title>Home</title>
+    <title>Agendamentos</title>
 </head>
 
 <body>
@@ -48,6 +48,7 @@
                         <tr class='table-secondary'>
                             <th> Titulo </th>
                             <th> Cor </th>
+                            <th> Situação </th>
                             <th> Data Inicial </th>
                             <th> Data Final </th>
                             <th> Ação</th>
@@ -59,15 +60,22 @@
             $query_envents = "select id,title,color,start,end from agendamento where usuarioID=" . $usuID;
             $resultado = mysqli_query($conexao, $query_envents);
             while ($row_events = $resultado->fetch_array()) {
-              $id= $row_events['id'];
-              $title = $row_events['title'];
-              $color = $row_events['color'];
-              $start = $row_events['start'];
-              $end = $row_events['end'];
+                $id= $row_events['id'];
+                $title = $row_events['title'];
+                $color = $row_events['color'];
+                $start = $row_events['start'];
+                $end = $row_events['end'];
               
               
-              echo "<tr><td>$title</td> <td style='background-color:$color ;'></td> <td>".date('d/m/Y H:i', strtotime($start))."</td> <td>".date('d/m/Y H:i', strtotime($end))."</td>";
-              echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-info'>Editar</a><a href='deletar.php?id=$id'class='btn btn-danger'>Apagar</a></td></tr>";
+                echo "<tr><td>$title</td> <td style='background-color:$color';></td> ";
+                switch ($color){
+                    case "red":echo "<td>Urgente</td>";break;
+                    case "yellow":echo "<td>Importante</td>";break;
+                    case "green":echo "<td>Desejável</td>";break;
+                    case "blue":echo "<td>Descartável</td>";break;
+                }
+                echo "<td>".date('d/m/Y H:i', strtotime($start))."</td> <td>".date('d/m/Y H:i', strtotime($end))."</td>";
+                echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-info'>Editar</a><a href='deletar.php?id=$id'class='btn btn-danger'>Apagar</a></td></tr>";
             }
             
             mysqli_close($conexao);

@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Document</title>
+    <title>Perfil</title>
 </head>
 
 <body>
@@ -59,7 +59,7 @@
                     echo "<form method='post' action='editar.php?id=$usuID'>";
                 ?>
                     <div class="d-flex flex-column align-items-center" id="imgperfil">
-                        <img class="rounded-circle m-4"width="150px" src="
+                        <img class="rounded-circle m-4"width="200px"height="200px" src="
                             <?php 
                                 if(file_exists("imagens/perfil/imagem_user$usuID.png")){
                                     echo "imagens/perfil/imagem_user$usuID.png";
@@ -96,28 +96,17 @@
             <div class="container p-4">
                 <!-- Section: Social media -->
                 <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-facebook-f"></i></a>
-
                     <!-- Twitter -->
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
                             class="fab fa-twitter"></i></a>
-
-                    <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                            class="fab fa-google"></i></a>
-
                     <!-- Instagram -->
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
                             class="fab fa-instagram"></i></a>
                     <!-- Linkedin -->
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
                             class="fab fa-linkedin-in"></i></a>
-
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" target="_blank"
-                        href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
                 </section>
                 <section class="mb-4">
