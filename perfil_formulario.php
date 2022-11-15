@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand"
-                    href="">Olá, <?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                    href=""><?php echo strtok($_SESSION["nomeusuario"]);?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +40,10 @@
                 </div>
             </div>
         </nav>
+        
         <div class="container">
             <div class="row justify-content-center align-items-center vh-100">
-                <div class="col-auto background">
+                <div class="col-5 background">
                     <h1 class="titulo" id="texto">Perfil</h1>
                     <?php
                     include "db.php";
@@ -55,7 +56,7 @@
                     $nome = $resultado['usuarioNome'];
                     $dataNascimento = $resultado['usuarioDataNascimento'];
                     mysqli_close($conexao); 
-                    echo "<form method='post' action='editar.php?id=$usuID'>";
+                    echo "<form method='post' action='editar.php?id=$usuID' enctype='multipart/form-data'>";
                 ?>
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Nome</label>
@@ -70,21 +71,20 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Senha</label>
-                        <input type="password" class="form-control inputvalor" name="senha" id="senha"
-                            placeholder="Digite sua senha" required>
-                        <input class="form-check-input" type="checkbox" id="flexCheckDefault" onclick="myFunction()">
-                        <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
-                    </div>
-
-                    <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Data de Nascimento</label>
                         <input type="date" min='1900-12-31' max='9999-12-31' class="form-control inputvalor" value="<?php echo $dataNascimento ?>"
                             name="dataNascimento" id="dataNascimento" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="conteudo">Enviar imagem para perfil:</label>
+                        <input type="file" name="imagem" accept="image/*">
+                    </div>
 
                     <div class="mb-3">
                         <input type='submit' name='editar_perfil' class='btn btn-dark botao' value='Editar perfil' />
+                    </div>
+                    <div class="mb-3">
+                        <a href="perfil.php" class="btn btn-danger botao">Cancelar</a>
                     </div>
 
                     </form>

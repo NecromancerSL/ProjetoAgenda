@@ -18,13 +18,16 @@
         }
         
    } else if(isset($_POST["editar_perfil"])){
+        $img_nome = "imagem_user$id.png";
+        $dir = 'imagens/perfil/';
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $dir.$img_nome);
         $nome=$_POST["nome"];
         $email=$_POST["email"];
         $dataNascimento=$_POST["dataNascimento"];
         $query="UPDATE usuario set usuarioEmail = '$email', usuarioNome = '$nome', usuarioDataNascimento='$dataNascimento' where usuarioid=$id";
         if ($conexao->query($query) === TRUE) {
             $_SESSION["nomeusuario"]="$nome";
-            header("location: home.php");
+            header("location: perfil.php");
         } else {
             echo "Error";
         }
