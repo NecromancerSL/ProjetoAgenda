@@ -75,7 +75,7 @@
                     case "blue":echo "<td>Descartável</td>";break;
                 }
                 echo "<td>".date('d/m/Y H:i', strtotime($start))."</td> <td>".date('d/m/Y H:i', strtotime($end))."</td>";
-                echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-info'>Editar</a><a href='deletar.php?id=$id'class='btn btn-danger'>Apagar</a></td></tr>";
+                echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-info'>Editar</a>"."<a href='deletar.php?id=$id&token=.md5(session_id()).'"."class='btn btn-danger'>Apagar</a></td></tr>";
             }
             
             mysqli_close($conexao);
@@ -83,6 +83,12 @@
 
                     </table>
                 </div>
+                <h6 class="alerta" id="alerta">
+                        <?php $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                        if($erro==1){
+                            echo "Ocorreu um erro";
+                        }?>
+                    </h6>
                 <div class="mb-3">
                     <a href="agendamento_formulario.php">
                         <button type="button" class="btn btn-dark botao">Agendar</button>
