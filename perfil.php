@@ -33,6 +33,9 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
                         </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>
+                        </li>
                     </ul>
                     <li class="nav-item active">
                         <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span
