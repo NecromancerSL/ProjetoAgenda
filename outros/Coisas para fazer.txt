@@ -5,7 +5,7 @@ cadastro:
 
 - estilizar o botão de visualizar senha 🆗
 
-- arrumar a formatação da data
+- arrumar a formatação da data 🆗
 
 -----------------------------------------------------------------
 
@@ -13,50 +13,50 @@ login:
 
 - adicionar o botao de visualização 🆗
 
-- melhorar o inscrever-se
+- melhorar o inscrever-se 🆗
 
 -----------------------------------------------------------------
 
 Home:
 
-- modificar o botão de anterior e proximo
+- modificar o botão de anterior e proximo 🆗
 
-- alterar algumas coisas do rodapé
+- alterar algumas coisas do rodapé 🆗
 
 -----------------------------------------------------------------
 
 perfil editar:
 
-- botão de mostrar senha 
+- botão de mostrar senha 🆗
 
-- arrumar a data
+- arrumar a data 🆗
 
-- melhorar a aparencia
+- melhorar a aparencia 
 
 ----------------------------------------------------------------
 
 agendamentos:
 
-- ordem das cores 
+- ordem das cores 🆗
 
 - paginação
 
-- nova coluna que fala a comunidade
+- nova coluna que fala a comunidade 🆗
 
 -----------------------------------------------------------------
 
 formulario de agendamentos:
 
-- arrumar a parte da data
+- arrumar a parte da data 🆗
 
-- colocar uma parse de situação dentro de cada cor
+- colocar uma parse de situação dentro de cada cor 🆗
 
-- arrumar a ordem
+- arrumar a ordem 🆗
 
 ------------------------------------------------------------------
 
 opcional:
 
-- tutorial
+- tutorial 
 
-- tabelinha das cores
+- tabelinha das cores 
