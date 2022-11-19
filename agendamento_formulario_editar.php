@@ -16,10 +16,9 @@
 
 <body>
     <a name="topo">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="perfil.php">Olá,
-                <?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                <a class="navbar-brand" href="perfil.php"><?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -28,21 +27,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
+                            <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="agendamentos.php">Agendamentos <span class="sr-only"></span></a>
+                            <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>
                         </li>
                     </ul>
                     <li class="nav-item active">
-                    <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
+                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
                     </li>
                 </div>
             </div>
         </nav>
+                   
         <div class="container">
             <div class="row justify-content-center align-items-center vh-100">
                 <div class="col-auto background">

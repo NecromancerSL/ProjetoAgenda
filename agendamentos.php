@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php include "verificar.php";?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +18,7 @@
     <a name="topo">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="perfil.php">Olá,
-                    <?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                <a class="navbar-brand" href="perfil.php"><?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -27,20 +27,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
+                            <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="">Agendamentos <span class="sr-only"></span></a>
+                            <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>
                         </li>
                     </ul>
                     <li class="nav-item active">
-                    <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
+                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span
+                                class="sr-only"></span></a>
                     </li>
                 </div>
             </div>
+        </nav>
         </nav>
 
         <div class="container">
@@ -60,14 +62,14 @@
                             <?php
             include "db.php";
             $usuID = $_SESSION["ID"];
-            $query_envents = "select id,title,color,start,end from agendamento where usuarioID=" . $usuID;
-            $resultado = mysqli_query($conexao, $query_envents);
-            while ($row_events = $resultado->fetch_array()) {
-                $id= $row_events['id'];
-                $title = $row_events['title'];
-                $color = $row_events['color'];
-                $start = $row_events['start'];
-                $end = $row_events['end'];
+            $query = "select id,title,color,start,end from agendamento where usuarioID=" . $usuID;
+            $resultado = mysqli_query($conexao, $query);
+            while ($rows = $resultado->fetch_array()) {
+                $id= $rows['id'];
+                $title = $rows['title'];
+                $color = $rows['color'];
+                $start = $rows['start'];
+                $end = $rows['end'];
               
               
                 echo "<tr><td>$title</td> <td style='background-color:$color';></td> ";
@@ -87,11 +89,11 @@
                     </table>
                 </div>
                 <h6 class="alerta" id="alerta">
-                        <?php $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                    <?php $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
                         if($erro==1){
                             echo "Ocorreu um erro";
                         }?>
-                    </h6>
+                </h6>
                 <div class="mb-3">
                     <a href="agendamento_formulario.php">
                         <button type="button" class="btn btn-dark botao">Agendar</button>
@@ -115,7 +117,8 @@
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
                             class="fab fa-linkedin-in"></i></a>
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank"
+                        href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
                 </section>
                 <section class="mb-4">
