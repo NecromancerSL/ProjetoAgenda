@@ -45,27 +45,32 @@
                 </div>
             </div>
         </nav>
+
+        <div class=container>
+            <div class="text-center">
+                <h2>GRUPO 2</h2>
+            </div>
+            <br>
+            <div class="d-flex flex-column align-items-center">
+                <img width="800px"height="600px" src="imagens/imagemgrupo2.png">
+            </div> 
+            <br>  
+            <div>
+                <h3>Sobre Nós :</h3>
+                <p>O grupo 2 foi criado para a matéria de Desenvolvimento de Software II na Faculdade Eduvale Avaré, sendo constituído por Gustavo Nunes, Gustavo Tavares e Yuri Furgeri, o grupo 2 tem como objetivo principal a entrega de um serviço de qualidade e de fácil acesso, sendo de suma importancia a comunicação entre os integrantes o grupo 2 se destaca pela união e excelência na execução do projeto.</p>    
+            </div>
+            <br>
+            <div>
+                <h3>Agenda Feliz :</h3>
+                <p>A agenda feliz é uma Web Agenda para uso geral, sendo adequada para todos os públicos e de fácil uso a Agenda Feliz se destaca pelo seu design minimalista e direto ao ponto, para facilitar a acessibilidade e entregar maior desempenho. As tarefas são vistas por ordem de importância e urgencia trazendo uma experiência visual de fácil entendimento. A Agenda Feliz não só proporciona agendamentos e horários, mas uma proposta de organização e produtividade para o dia a dia de todo usuário.</p>    
+            </div>
+            <br>
+            <div>
+                <h3>Sobre o Projeto:</h3>
+                <p>O projeto passa por todas as etapas do desenvolvimento de um software, desde o planejamento e documentação até a programação, testes e entrega. Com bastante foco no trabalho em equipe e nos procedimentos internos, a matéria visa demonstrar uma visão mais próxima da realidade e do dia a dia de um desenvolvedor e as etapas necessárias para a implementação de um projeto do zero.</p>    
+            </div>
+        </div>
         
-        <div class="text-center">
-        <h1>GRUPO 2</h1>
-        </div>
-
-        <div class="d-flex flex-column align-items-center">
-        <img width="800px"height="600px" src="imagens/imagemgrupo2.png">
-        </div>
-
-        <div>
-        <h2>Sobre Nós :</h2>
-        <h3>O grupo 2 foi criado para a matéria de Desenvolvimento de Software II na Faculdade Eduvale Avaré, sendo constituído por Gustavo Nunes, Gustavo Tavares e Yuri Furgeri, o grupo 2 tem como objetivo principal a entrega de um serviço de qualidade e de fácil acesso, sendo de suma importancia a comunicação entre os integrantes o grupo 2 se destaca pela união e excelência na execução do projeto.</h3>    
-        </div>
-        <div>
-        <h2>Agenda Feliz :</h2>
-        <h3>A agenda feliz é uma Web Agenda para uso geral, sendo adequada para todos os públicos e de fácil uso a Agenda Feliz se destaca pelo seu design minimalista e direto ao ponto, para facilitar a acessibilidade e entregar maior desempenho. As tarefas são vistas por ordem de importância e urgencia trazendo uma experiência visual de fácil entendimento. A Agenda Feliz não só proporciona agendamentos e horários, mas uma proposta de organização e produtividade para o dia a dia de todo usuário.</h3>    
-        </div>
-        <div>
-        <h2>Sobre o Projeto:</h2>
-        <h3>O projeto passa por todas as etapas do desenvolvimento de um software, desde o planejamento e documentação até a programação, testes e entrega. Com bastante foco no trabalho em equipe e nos procedimentos internos, a matéria visa demonstrar uma visão mais próxima da realidade e do dia a dia de um desenvolvedor e as etapas necessárias para a implementação de um projeto do zero.</h3>    
-        </div>
         
             
         <footer class="bg-dark text-center text-white">

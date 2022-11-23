@@ -45,9 +45,15 @@
                 </div>
             </div>
         </nav>
-        
-        <h1>Olá, aqui nessa página você terá acesso a um breve tutorial de como estar utilizando a Agenda Feliz e suas funcionalidades</h1>
+        <br>
+        <div class="container">
+            <h2>Olá, aqui nessa página você terá acesso a um breve tutorial de como estar utilizando a Agenda Feliz e suas funcionalidades</h2>
+            <br>
+            <div>
 
+            </div>
+        </div>
+       
         <footer class="bg-dark text-center text-white">
             <!-- Grid container -->
             <div class="container p-4">
@@ -88,7 +94,7 @@
                 </section>
             </div>
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2022 Copyright: <a class="text-white" href="#">Grupo 2</a>
+                © 2022 Copyright: <a class="text-white" href="sobrenos.php">Grupo 2</a>
             </div>
         </footer>
     </body>
