@@ -62,6 +62,7 @@
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Avaliação</label>
                             <select class="form-select" aria-label="Default select example" name="Avaliação" required>
+                                <option selected>Avaliações</option>
                                 <option value="Ótimo">Ótimo</option>
                                 <option value="Bom">Bom</option>
                                 <option value="Regular">Regular</option>
@@ -124,7 +125,13 @@
                 © 2022 Copyright: <a class="text-white" href="#">Grupo 2</a>
             </div>
         </footer>
-
+        <script>
+            window.onbeforeunload = () => {
+            for(const form of document.getElementsByTagName('form')) {
+                form.reset();
+            }
+            }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
