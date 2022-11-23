@@ -29,14 +29,15 @@
                             <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
+                            <a class="nav-link" href="agendamentos.php?pagina=1">Agendamentos<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>
                         </li>
                     </ul>
                     <li class="nav-item active">
-                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
+                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span
+                                class="sr-only"></span></a>
                     </li>
                 </div>
             </div>

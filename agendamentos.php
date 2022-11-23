@@ -30,7 +30,7 @@
                             <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
+                            <a class="nav-link" href="agendamentos.php?pagina=1">Agendamentos<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>
@@ -42,7 +42,6 @@
                     </li>
                 </div>
             </div>
-        </nav>
         </nav>
 
         <div class="container">
@@ -63,8 +62,23 @@
             include "db.php";
             $usuID = $_SESSION["ID"];
             $query = "select id,title,color,start,end from agendamento where usuarioID=" . $usuID;
+
+            $total_reg = "4";
+            $pagina=$_GET['pagina'];
+            if (!$pagina) {
+            $pc = "1";
+            } else {
+            $pc = $pagina;
+            }
+            $inicio = $pc - 1;
+            $inicio = $inicio * $total_reg;
+            $limite = mysqli_query($conexao,"$query ORDER BY end DESC LIMIT $inicio,$total_reg");
+            $todos = mysqli_query($conexao,"$query");
+            $tr = mysqli_num_rows($todos);
+            $tp = $tr / $total_reg;
+            
             $resultado = mysqli_query($conexao, $query);
-            while ($rows = $resultado->fetch_array()) {
+            while ($rows = mysqli_fetch_array($limite)) {
                 $id= $rows['id'];
                 $title = $rows['title'];
                 $color = $rows['color'];
@@ -80,7 +94,7 @@
                     case "blue":echo "<td>Descartável</td>";break;
                 }
                 echo "<td>".date('d/m/Y H:i', strtotime($start))."</td> <td>".date('d/m/Y H:i', strtotime($end))."</td>";
-                echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-info'>Editar</a>"."<a href='deletar.php?id=$id&token=.md5(session_id()).'"."class='btn btn-danger'>Apagar</a></td></tr>";
+                echo "<td><a href='agendamento_formulario_editar.php?id=$id'class='btn btn-info mx-1'>Editar</a>"."<a href='deletar.php?id=$id&token=.md5(session_id()).'"."class='btn btn-danger mx-1'>Apagar</a></td></tr>";
             }
             
             mysqli_close($conexao);
@@ -94,6 +108,38 @@
                             echo "Ocorreu um erro";
                         }?>
                 </h6>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <?php
+                            $anterior = $pc -1;
+                            $proximo = $pc +1;
+                            
+
+                            if ($pc>1) {
+                                echo " <li class='page-item'><a class='page-link' href='?pagina=$anterior'>Anterior</a></li>";
+                            }else{
+                                echo " <li class='page-item disabled'><a class='page-link'>Anterior</a></li>";
+                            }
+
+                            for($i = 1; $i < $tp + 1; $i++){
+                                if($i!=$pc){
+                                    echo "<li class='page-item'><a  class='page-link' href='?pagina=$i'>$i</a></li>";
+                                }else{
+                                    echo "<li class='page-item'><a  class='page-link' href='?pagina=$i'>$i</a></li>";
+                                }
+                                
+                            }
+
+
+                            if ($pc<$tp) {
+                                echo " <li class='page-item'><a class='page-link' href='?pagina=$proximo'>Proximo</a></li>";
+                            }else{
+                                echo " <li class='page-item disabled'><a class='page-link'>Proximo</a></li>";
+                            }
+                        ?>
+                    </ul>
+                </nav>
+                
                 <div class="mb-3">
                     <a href="agendamento_formulario.php">
                         <button type="button" class="btn btn-dark botao">Agendar</button>

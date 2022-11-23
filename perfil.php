@@ -17,9 +17,9 @@
 
 <body>
     <a name="topo">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href=""><?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                <a class="navbar-brand" href="perfil.php"><?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
                             <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
+                            <a class="nav-link" href="agendamentos.php?pagina=1">Agendamentos<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>

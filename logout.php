@@ -15,6 +15,10 @@
                 <div class="col-auto background p-4">
                     <h1 class="titulo" id="texto">Tem certeza que deseja sair?</h1>
                     <div class="text-center">
+                        <img class="h-50 w-50" src="imagens/logout/chorar.gif" alt="emote de choro">
+                    </div>
+                    <div class="text-center">
+                        
                         <?php
                             include "verificar.php";
                             $token = md5(session_id());

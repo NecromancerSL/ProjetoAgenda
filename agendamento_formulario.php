@@ -16,7 +16,7 @@
 
 <body>
     <a name="topo">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="perfil.php"><?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -30,14 +30,15 @@
                             <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="agendamentos.php">Agendamentos<span class="sr-only"></span></a>
+                            <a class="nav-link" href="agendamentos.php?pagina=1">Agendamentos<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>
                         </li>
                     </ul>
                     <li class="nav-item active">
-                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span class="sr-only"></span></a>
+                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span
+                                class="sr-only"></span></a>
                     </li>
                 </div>
             </div>
