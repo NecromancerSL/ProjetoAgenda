@@ -29,7 +29,7 @@
                             if(isset($_GET['token']) && $_GET['token'] === $token) {
                                 $deletar="delete from agendamento where id=$id";
                                 if ($conexao->query($deletar) === TRUE) {
-                                    header("location: agendamentos.php");
+                                    header("location: agendamentos.php?pagina=1");
                                 } else {
                                     header("location: agendamentos.php?erro=1");
                                 } 
