@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo.css">
     
-    <title></title>
+    <title>Editar agendamentos</title>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center vh-100">
                 <div class="col-auto background">
-                    <h1 class="titulo" id="texto">Formulario de Agenda</h1>
+                    <h1 class="titulo" id="texto">Edição da agendamentos</h1>
 
                     <?php
                     include "db.php";
@@ -82,13 +82,13 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Data de Início</label>
+                        <label for="formGroupExampleInput" class="form-label">Data de início</label>
                         <input type="datetime-local" min='1900-12-31' max='9999-12-31' class="form-control inputvalor" value="<?php echo $start ?>"
                             name="agendaInicial" id="inicial" placeholder="Digite a data inicial" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Data de Termino</label>
+                        <label for="formGroupExampleInput" class="form-label">Data de término</label>
                         <input type="datetime-local"  class="form-control inputvalor" value="<?php echo $end ?>"
                             name="agendaFinal" id="final" placeholder="Digite a data final" required>
                     </div>

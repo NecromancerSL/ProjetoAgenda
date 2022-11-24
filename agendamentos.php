@@ -50,7 +50,7 @@
                 <div class="mb-3">
                     <table style='text-align: center;' class='table table-active'>
                         <tr class='table-secondary'>
-                            <th> Titulo </th>
+                            <th> Título </th>
                             <th> Cor </th>
                             <th> Situação </th>
                             <th> Data Inicial </th>
@@ -132,9 +132,9 @@
 
 
                             if ($pc<$tp) {
-                                echo " <li class='page-item'><a class='page-link' href='?pagina=$proximo'>Proximo</a></li>";
+                                echo " <li class='page-item'><a class='page-link' href='?pagina=$proximo'>Próximo</a></li>";
                             }else{
-                                echo " <li class='page-item disabled'><a class='page-link'>Proximo</a></li>";
+                                echo " <li class='page-item disabled'><a class='page-link'>Próximo</a></li>";
                             }
                         ?>
                     </ul>

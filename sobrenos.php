@@ -13,7 +13,7 @@
         <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
         <link href='css/fullcalendar/main.css' rel='stylesheet' />
         <link rel="stylesheet" href="css/estilo.css">
-        <title>Tutorial</title>
+        <title>Sobre nós</title>
     </head>
 
     <body>

@@ -49,7 +49,7 @@
 
                 <div class="col-auto background">
 
-                    <h1 class="titulo" id="texto">Formulario de Agenda</h1>
+                    <h1 class="titulo" id="texto">Adição de Agendamentos</h1>
 
                     <form method="post" action="agendar.php">
 

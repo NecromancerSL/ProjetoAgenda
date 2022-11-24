@@ -75,7 +75,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center vh-100">
                     <div class="col-5 background">
-                        <h1 class="titulo" id="texto">Alterar de senha</h1>
+                        <h1 class="titulo" id="texto">Alterar senha</h1>
                         <form action="mudar_senha.php">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label">Senha atual</label>

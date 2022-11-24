@@ -53,7 +53,7 @@
   ?>
         <div class="container">
             <div class="row justify-content-center align-items-center vh-100">
-                <h1 class="titulo" id="texto">Formulario de Feedback</h1>
+                <h1 class="titulo" id="texto">Formulário de feedback</h1>
                 <div class="mb-3">
                     <form action="https://formspree.io/f/mrgdonnv" method="POST">
                         <div class="mb-3">
@@ -114,7 +114,7 @@
                                     <a href="#topo" class="text-white">Voltar para o Topo</a>
                                 </li>
                                 <li>
-                                    <a href="#topo" class="text-white">Enviar Feedback</a>
+                                    <a href="feedback_formulario.php" class="text-white">Enviar Feedback</a>
                                 </li>
                             </ul>
                         </div>
