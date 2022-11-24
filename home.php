@@ -78,7 +78,7 @@
             </div>
             <br>
             <div class="row  justify-content-center align-items-center">
-                <a href="agendamentos.php"><button type="submit" class="btn btn-dark botao">Agendamentos</button>
+                <a href="agendamentos.php?pagina=1"><button type="submit" class="btn btn-dark botao">Agendamentos</button>
                 </a>
             </div>
         </div>
