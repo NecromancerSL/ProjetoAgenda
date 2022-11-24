@@ -30,9 +30,9 @@
         $query="UPDATE usuario set usuarioEmail = '$email', usuarioNome = '$nome', usuarioDataNascimento='$dataNascimento' where usuarioid=$id";
         if ($conexao->query($query) === TRUE) {
             $_SESSION["nomeusuario"]="$nome";
-            header("location: perfil.php");
+            header("location: perfil.php?acerto=2");
         } else {
-            echo "Error";
+            header("location: perfil.php?erro=1");
         }
    } 
    mysqli_close($conexao);

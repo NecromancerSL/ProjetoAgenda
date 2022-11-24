@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <?php
+        include "verificar.php";
+        if(isset($_GET["senha_nova"])){
+        include "db.php";
+        $usuID = $_SESSION["ID"];
+        $query = "select usuarioSenha from usuario where usuarioID=" . $usuID;
+        
+        $consulta = mysqli_query($conexao, $query);        
+        $resultado=mysqli_fetch_assoc($consulta);        
+        $senha = $resultado['usuarioSenha'];
+
+        $senha_nova=md5($_GET["senha_nova"]);
+        $senha_atual=md5($_GET["senha_atual"]);
+        
+
+        if($senha==$senha_atual){
+            $query="UPDATE usuario set usuariosenha='$senha_nova' where usuarioID=$usuID";
+            
+            if($conexao->query($query) === TRUE){
+                header("location: perfil.php?acerto=1");
+            }else {
+                header("location: mudar_senha.php?erro=2");
+            }
+            
+        }else {
+            header("location: mudar_senha.php?erro=1");
+        }
+        mysqli_close($conexao);
+    }
+    ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/8b69b9518f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <title>Mudar senha</title>
+    </head>
+    <body>
+        <a name="topo">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="perfil.php"><?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="home.php">Home<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="agendamentos.php?pagina=1">Agendamentos<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="tutorial.php">Tutorial<span class="sr-only"></span></a>
+                            </li>
+                        </ul>
+                        <li class="nav-item active">
+                            <a class=" btn btn-danger" href="logout.php?token=">Sair <span
+                                    class="sr-only"></span></a>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center vh-100">
+                    <div class="col-5 background">
+                        <h1 class="titulo" id="texto">Alterar de senha</h1>
+                        <form action="mudar_senha.php">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Senha atual</label>
+                            <input type="password" maxlength="50" class="form-control inputvalor" name="senha_atual" id="senha_atual"
+                                placeholder="Digite sua senha atual" required>
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" onclick="myFunction1()">
+                            <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Senha nova</label>
+                            <input type="password" maxlength="50" class="form-control inputvalor" name="senha_nova" id="senha_nova"
+                                placeholder="Digite sua senha nova" required>
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" onclick="myFunction2()">
+                            <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-dark botao" id="btnacessar">Alterar</button>
+                        </div>
+                        <div class="mb-3">
+                            <a href="perfil.php" class="btn btn-danger botao">Cancelar</a>
+                        </div>
+                        <h6 class="alerta" id="alerta">
+                            <?php 
+                                $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                                if($erro==1){
+                                    echo "<h6 class='alert alert-danger text-center'>Senha atual inválida</h6>";
+                                }else if($erro==2){
+                                    echo "<h6 class='alert alert-danger text-center'>Erro ao mudar a senha</h6>";
+                                }
+                            ?>
+                        </h6>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
+                            class="fab fa-github"></i></a>
+                </section>
+                <section class="mb-4">
+                    <p>
+                        Site criado como projeto de faculdade
+                    </p>
+                </section>
+                <section class="">
+                    <div class="row">
+                        <div class="mb-4">
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#topo" class="text-white">Voltar para o Topo</a>
+                                </li>
+                                <li>
+                                    <a href="feedback_formulario.php" class="text-white">Enviar Feedback</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright: <a class="text-white" href="sobrenos.php">Grupo 2</a>
+            </div>
+        </footer>
+        <script src="js/mudar_senha.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+        
+    </body>
+</html>

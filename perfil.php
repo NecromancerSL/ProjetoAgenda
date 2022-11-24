@@ -17,7 +17,7 @@
 
 <body>
     <a name="topo">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="perfil.php"><?php echo strtok($_SESSION["nomeusuario"], " ");?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,14 +38,14 @@
                         </li>
                     </ul>
                     <li class="nav-item active">
-                        <a class=" btn btn-danger" href="logout.php?token='.md5(session_id()).'">Sair <span
+                        <a class=" btn btn-danger" href="logout.php?token=">Sair <span
                                 class="sr-only"></span></a>
                     </li>
                 </div>
             </div>
         </nav>
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row justify-content-center align-items-center vh-100">
                 <div class="col-5">
                     <h1 class="titulo" id="texto">Perfil</h1>
@@ -59,10 +59,9 @@
                     $email = $resultado['usuarioEmail'];
                     $nome = $resultado['usuarioNome'];
                     $dataNascimento = $resultado['usuarioDataNascimento'];
-                    echo "<form method='post' action='editar.php?id=$usuID'>";
                 ?>
                     <div class="d-flex flex-column align-items-center" id="imgperfil">
-                        <img class="rounded-circle m-4"width="200px"height="200px" src="
+                        <img class="rounded-circle m-4"width="30%"height="30%" src="
                             <?php 
                                 if(file_exists("imagens/perfil/imagem_user$usuID.png")){
                                     echo "imagens/perfil/imagem_user$usuID.png";
@@ -86,17 +85,32 @@
                         <label class="labels">Data de Nascimento</label>
                         <input type="email" class="form-control"value="<?php echo date('d/m/Y', strtotime($dataNascimento))?>" disabled>
                     </div>
-                        <a href="perfil_formulario.php" class="btn btn-dark botao">Edição</a>
+                        <a href="perfil_formulario.php" class="btn btn-dark botao">Editar perfil</a>
+                        <div class="my-1">
+                            <a style="float: right;padding-right:20%" class="link-danger" href="deletar_conta">deletar conta</a>
+                            <a style="float: left;padding-left:20%" href="mudar_senha.php">Mudar senha</a>
+                            </div>
+                        </div>
+
+                            <?php 
+                                $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                                $acerto = filter_input(INPUT_GET,"acerto",FILTER_SANITIZE_NUMBER_INT);
+                            if($erro==1){
+                                echo "<h6 class='alerta' id='alerta'>Erro</h6>";
+                            }if($acerto==1){
+                                echo "<h6 class='alerta2' id='alerta2'>Senha Alterada com sucesso</h6>";
+                            }else if($acerto==2){
+                                echo "<h6 class='alerta2' id='alerta2'>Perfil Alterada com sucesso</h6>";
+                            }
+                            ?>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
 
-
-        <footer class="bg-dark text-center text-white">
+        <footer class="bg-dark text-center text-white ">
             <!-- Grid container -->
-            <div class="container p-4">
+            <div class="container-fluid p-3">
                 <!-- Section: Social media -->
                 <section class="mb-4">
                     <!-- Twitter -->
@@ -134,13 +148,13 @@
                 </section>
             </div>
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2022 Copyright: <a class="text-white" href="#">Grupo 2</a>
+                © 2022 Copyright: <a class="text-white" href="sobrenos.php">Grupo 2</a>
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
-        <script src="js/cadastro.js"></script>
-</body>
+        <script src="js/main.js"></script>
+    </body>
 
 </html>

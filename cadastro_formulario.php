@@ -21,7 +21,7 @@
 
             <div class="col-auto background">
 
-                <h1 class="titulo" id="texto">cadastro de usuário</h1>
+                <h1 class="titulo" id="texto">Cadastro de usuário</h1>
 
                 <form method="post" action="cadastrar.php">
 
@@ -33,7 +33,7 @@
 
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Senha</label>
-                        <input type="password" class="form-control inputvalor" name="senha" id="senha"
+                        <input type="password" maxlength="50" class="form-control inputvalor" name="senha" id="senha"
                             placeholder="Digite sua senha" required>
                         <input class="form-check-input" type="checkbox" id="flexCheckDefault" onclick="myFunction()">
                         <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>

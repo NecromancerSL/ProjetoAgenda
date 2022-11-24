@@ -35,11 +35,19 @@
     border-color: darkgrey;
     border-radius: 10px;
 }
+.alerta2{
+    font-size:120%;
+    text-align: center;
+    color: green;
+}
+
 
 .alerta {
+    font-size: 120%;
     text-align: center;
     color: red;
 }
+
 
 a .cadastroLink {
     background-color: green;
