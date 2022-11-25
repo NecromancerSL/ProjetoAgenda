@@ -18,7 +18,7 @@
 
             <div class="col-auto background">
 
-                <h1 class="titulo" id="texto">Sistema de Login</h1>
+                <h1 class="titulo" id="texto">Login</h1>
 
                 <form method="post" action="login.php">
 

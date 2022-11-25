@@ -87,7 +87,7 @@
                     </div>
                         <a href="perfil_formulario.php" class="btn btn-dark botao">Editar perfil</a>
                         <div class="my-1">
-                            <a style="float: right;padding-right:20%" class="link-danger" href="deletar_conta">deletar conta</a>
+                            <a style="float: right;padding-right:20%" class="link-danger" href="deletar_conta">Deletar conta</a>
                             <a style="float: left;padding-left:20%" href="mudar_senha.php">Mudar senha</a>
                             </div>
                         </div>

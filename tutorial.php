@@ -50,7 +50,12 @@
             <h2>Olá, aqui nessa página você terá acesso a um breve tutorial de como estar utilizando a Agenda Feliz e suas funcionalidades</h2>
             <br>
             <div>
-
+                <video width="1050" height="600" controls="controls" autoplay="autoplay">
+                    <source src="tutorial/tutorial.mp4" type="video/mp4">
+                    <object data="" width="1050" height="600">
+                        <embed width="1050" height="600" src="tutorial/tutorial.mp4">
+                    </object>
+                </video>
             </div>
         </div>
        
@@ -63,7 +68,7 @@
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
                             class="fab fa-twitter"></i></a>
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/grupo2_ads/?next=%2F" role="button"><i
                             class="fab fa-instagram"></i></a>
                     <!-- Linkedin -->
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
