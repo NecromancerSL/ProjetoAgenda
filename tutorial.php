@@ -45,17 +45,17 @@
                 </div>
             </div>
         </nav>
-        <br>
+        
         <div class="container">
-            <h2>Olá, aqui nessa página você terá acesso a um breve tutorial de como estar utilizando a Agenda Feliz e suas funcionalidades</h2>
-            <br>
-            <div>
-                <video width="1050" height="600" controls="controls" autoplay="autoplay">
-                    <source src="tutorial/tutorial.mp4" type="video/mp4">
-                    <object data="" width="1050" height="600">
-                        <embed width="1050" height="600" src="tutorial/tutorial.mp4">
-                    </object>
-                </video>
+            <div class="row justify-content-center align-items-center vh-100">
+                <div class="col-auto">
+                <h1 class="titulo" id="texto">Tutorial</h1>
+                <div class="mb-3">
+                    <video style="margin: 0 auto;width: 900px;"controls="controls">
+                        <source src="tutorial/tutorial.mp4" type="video/mp4">
+                    </video>
+                </div>
+                </div>
             </div>
         </div>
        

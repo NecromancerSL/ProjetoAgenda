@@ -85,8 +85,16 @@
                         <div class="mb-3">
                             <button type="submit" class="btn btn-dark botao" id="btnacessar">Agendar</button>
                         </div>
-
-                        <h6 class="alerta" id="alerta"></h6>
+                        <div class="mb-3">
+                            <a href="agendamentos.php?pagina=1" class="btn btn-danger botao">Cancelar</a>
+                        </div>
+                        <?php 
+                                $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                                $acerto = filter_input(INPUT_GET,"acerto",FILTER_SANITIZE_NUMBER_INT);
+                            if($erro==1){
+                                echo "<h6 class='alerta' id='alerta'>Data inicial maior que a data final</h6>";
+                            }
+                        ?>
 
                     </form>
                 </div>
