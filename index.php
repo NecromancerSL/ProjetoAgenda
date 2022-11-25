@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center vh-100">
 
-            <div class="col-auto background">
+            <div class="col-4 background">
 
                 <h1 class="titulo" id="texto">Login</h1>
 

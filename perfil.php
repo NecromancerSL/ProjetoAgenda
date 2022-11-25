@@ -96,7 +96,7 @@
                                 $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
                                 $acerto = filter_input(INPUT_GET,"acerto",FILTER_SANITIZE_NUMBER_INT);
                             if($erro==1){
-                                echo "<h6 class='alerta' id='alerta'>Erro</h6>";
+                                echo "<h6 class='alerta' id='alerta'>Erro em alterar o perfil</h6>";
                             }if($acerto==1){
                                 echo "<h6 class='alerta2' id='alerta2'>Senha Alterada com sucesso</h6>";
                             }else if($acerto==2){

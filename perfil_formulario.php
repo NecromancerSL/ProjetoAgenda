@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center vh-100">
                 <div class="col-5 background">
-                    <h1 class="titulo" id="texto">Perfil</h1>
+                    <h1 class="titulo" id="texto">Editar Perfil</h1>
                     <?php
                     include "db.php";
                     $usuID=$_SESSION["ID"];

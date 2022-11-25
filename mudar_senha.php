@@ -101,9 +101,9 @@
                             <?php 
                                 $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
                                 if($erro==1){
-                                    echo "<h6 class='alert alert-danger text-center'>Senha atual inválida</h6>";
+                                    echo "<h6 class='alerta' id='alerta'>Senha atual inválida</h6>";
                                 }else if($erro==2){
-                                    echo "<h6 class='alert alert-danger text-center'>Erro ao mudar a senha</h6>";
+                                    echo "<h6 class='alerta' id='alerta'>Erro ao mudar a senha</h6>";
                                 }
                             ?>
                         </h6>
