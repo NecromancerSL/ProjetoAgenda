@@ -17,11 +17,11 @@ if($agendaInicial<$agendaFinal){
     
     }else{
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        header("location: cadastro_formulario.php?erro=2");
+        header("location: agendamento_formulario.php?erro=2");
     
     }
 }else{
-    header("location: cadastro_formulario.php?erro=1");
+    header("location: agendamento_formulario.php?erro=1");
 }
 
 

@@ -10,12 +10,16 @@
         $agendaCor=$_POST["agendaCor"];
         $agendaInicial=$_POST["agendaInicial"];
         $agendaFinal=$_POST["agendaFinal"];
+        if($agendaInicial<$agendaFinal){
         $query="UPDATE agendamento set title = '$agendaTitulo', color = '$agendaCor', start='$agendaInicial', end='$agendaFinal' where id=$id";
         if ($conexao->query($query) === TRUE) {
-            header("location: home.php");
+            header("location: agendamentos.php?pagina=1");
         } else {
-            echo "Error";
+            header("location: agendamento_formulario_editar.php?erro=1&id=$id");
         }
+    }else{
+        header("location: agendamento_formulario_editar.php?erro=2&id=$id");
+    }
         
    } else if(isset($_POST["editar_perfil"])){
         $imagem = $_FILES["imagem"];

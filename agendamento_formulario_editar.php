@@ -48,7 +48,6 @@
             <div class="row justify-content-center align-items-center vh-100">
                 <div class="col-auto background">
                     <h1 class="titulo" id="texto">Edição de agendamentos</h1>
-
                     <?php
                     include "db.php";
                     $id = filter_input(INPUT_GET,"id",FILTER_SANITIZE_NUMBER_INT);
@@ -98,14 +97,15 @@
                     </div>
                     <div class="mb-3">
                             <a href="agendamentos.php?pagina=1" class="btn btn-danger botao">Cancelar</a>
-                        </div>
+                    </div>
                     <?php 
-                                $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
-                                $acerto = filter_input(INPUT_GET,"acerto",FILTER_SANITIZE_NUMBER_INT);
-                            if($erro==1){
-                                echo "<h6 class='alerta' id='alerta'>Data inicial maior que a data final</h6>";
-                            }
-                        ?>
+                            $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
+                        if($erro==2){
+                            echo "<h6 class='alerta' id='alerta'>Data inicial maior que a data final</h6>";
+                        }else if($erro==1){
+                            echo "<h6 class='alerta' id='alerta'>Erro ao editar</h6>";
+                        }
+                    ?>
                     
 
                     </form>
