@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src='js/fullcalendar/main.js'></script>
         <script src='js/fullcalendar/locales/pt-br.js'></script>
+        <link rel="icon" type="image/png" sizes="32x32" href="imagens/icones/favicon.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
@@ -57,7 +58,7 @@
             </div>
             <br>
             <div class="d-flex flex-column align-items-center">
-                <img width="800px"height="600px" src="imagens/imagemgrupo2.png">
+                <img width="400px"height="300px" src="imagens/sobre_nos/imagemgrupo2.png">
             </div>
             <br>
             <div>
@@ -66,7 +67,7 @@
             </div>
             <br>
             <div class="d-flex flex-column align-items-center">
-                <img width="700px"height="700px" src="imagens/agendafelizdesign1.png">
+                <img width="300px"height="300px" src="imagens/sobre_nos/agendafelizdesign1.png">
             </div>
             <br>
             <div>
