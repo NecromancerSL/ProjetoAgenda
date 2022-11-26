@@ -50,19 +50,23 @@
             <div class="text-center">
                 <h2>GRUPO 2</h2>
             </div>
-            <br>
-            <div class="d-flex flex-column align-items-center">
-                <img width="800px"height="600px" src="imagens/imagemgrupo2.png">
-            </div> 
-            <br>  
+            <br> 
             <div>
                 <h3>Sobre Nós :</h3>
                 <p>O grupo 2 foi criado para a matéria de Desenvolvimento de Software II na Faculdade Eduvale Avaré, sendo constituído por Gustavo Nunes, Gustavo Tavares e Yuri Furgeri, o grupo 2 tem como objetivo principal a entrega de um serviço de qualidade e de fácil acesso, sendo de suma importancia a comunicação entre os integrantes o grupo 2 se destaca pela união e excelência na execução do projeto.</p>    
             </div>
             <br>
+            <div class="d-flex flex-column align-items-center">
+                <img width="800px"height="600px" src="imagens/imagemgrupo2.png">
+            </div>
+            <br>
             <div>
                 <h3>Agenda Feliz :</h3>
                 <p>A agenda feliz é uma Web Agenda para uso geral, sendo adequada para todos os públicos e de fácil uso a Agenda Feliz se destaca pelo seu design minimalista e direto ao ponto, para facilitar a acessibilidade e entregar maior desempenho. As tarefas são vistas por ordem de importância e urgencia trazendo uma experiência visual de fácil entendimento. A Agenda Feliz não só proporciona agendamentos e horários, mas uma proposta de organização e produtividade para o dia a dia de todo usuário.</p>    
+            </div>
+            <br>
+            <div class="d-flex flex-column align-items-center">
+                <img width="700px"height="700px" src="imagens/agendafelizdesign1.png">
             </div>
             <br>
             <div>
@@ -73,28 +77,24 @@
         
         
             
+        <br>
         <footer class="bg-dark text-center text-white">
             <!-- Grid container -->
             <div class="container p-4">
                 <!-- Section: Social media -->
                 <section class="mb-4">
                     <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://twitter.com/grupo2ads" role="button"><i
                             class="fab fa-twitter"></i></a>
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/grupo2_ads/" role="button"><i
                             class="fab fa-instagram"></i></a>
                     <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1"  href="#" role="button"><i
                             class="fab fa-linkedin-in"></i></a>
                     <!-- Github -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
-                </section>
-                <section class="mb-4">
-                    <p>
-                        Site criado como projeto de faculdade
-                    </p>
                 </section>
                 <section>
                     <div class="row">

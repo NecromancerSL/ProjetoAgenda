@@ -50,6 +50,7 @@
             <div class="row justify-content-center align-items-center vh-100">
                 <div class="col-auto">
                 <h1 class="titulo" id="texto">Tutorial</h1>
+                <br>
                 <div class="mb-3">
                     <video style="margin: 0 auto;width: 900px;"controls="controls">
                         <source src="tutorial/tutorial.mp4" type="video/mp4">
@@ -59,28 +60,24 @@
             </div>
         </div>
        
+        <br>
         <footer class="bg-dark text-center text-white">
             <!-- Grid container -->
             <div class="container p-4">
                 <!-- Section: Social media -->
                 <section class="mb-4">
                     <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://twitter.com/grupo2ads" role="button"><i
                             class="fab fa-twitter"></i></a>
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/grupo2_ads/?next=%2F" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/grupo2_ads/" role="button"><i
                             class="fab fa-instagram"></i></a>
                     <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1"  href="#" role="button"><i
                             class="fab fa-linkedin-in"></i></a>
                     <!-- Github -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/NecromancerSL/ProjetoAgenda" role="button"><i
                             class="fab fa-github"></i></a>
-                </section>
-                <section class="mb-4">
-                    <p>
-                        Site criado como projeto de faculdade
-                    </p>
                 </section>
                 <section>
                     <div class="row">
