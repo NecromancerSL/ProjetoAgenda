@@ -103,7 +103,7 @@
                 <!-- Section: Social media -->
                 <section class="mb-4">
                     <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://twitter.com/grupo2ads!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://twitter.com/grupo2ads" role="button"><i
                             class="fab fa-twitter"></i></a>
                     <!-- Instagram -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/grupo2_ads/" role="button"><i
