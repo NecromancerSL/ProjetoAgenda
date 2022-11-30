@@ -73,7 +73,7 @@
             }
             $inicio = $pc - 1;
             $inicio = $inicio * $total_reg;
-            $limite = mysqli_query($conexao,"$query ORDER BY end DESC LIMIT $inicio,$total_reg");
+            $limite = mysqli_query($conexao,"$query ORDER BY end ASC LIMIT $inicio,$total_reg");
             $todos = mysqli_query($conexao,"$query");
             $tr = mysqli_num_rows($todos);
             $tp = $tr / $total_reg;
