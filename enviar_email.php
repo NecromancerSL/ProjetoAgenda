@@ -3,14 +3,6 @@ session_start();
 // Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
 include "PHPMailer/PHPMailerAutoload.php";
 include "db.php";
-$usuID = $_SESSION["ID"];
-
-$query="select usuarioNome,usuarioEmail from usuario where usuarioID=" . $usuID;
-$resultado=mysqli_query($conexao,$query) or die("Erro no banco de dados!");
-$rows=mysqli_fetch_assoc($resultado);        
-mysqli_close($conexao);                    
-$usuEmail = $rows['usuarioEmail'];
-$usuNome = $rows['usuarioNome'];
 
 // Inicia a classe PHPMailer 
 $mail = new PHPMailer(); 
@@ -48,7 +40,7 @@ $mail->FromName = "Grupo 2";
 
 // Define o(s) destinatário(s) 
 
-$mail->AddAddress("$usuEmail", "$usuNome"); 
+$mail->AddAddress("$email", "$nome"); 
 
 
 // Definir se o e-mail é em formato HTML ou texto plano 
@@ -58,12 +50,13 @@ $mail->IsHTML(true);
 $mail->CharSet = 'UTF-8'; 
 
 // Assunto da mensagem 
-$mail->Subject = "Teste"; 
+$mail->Subject = "Confirmação"; 
 
 // Corpo do email 
 $mail->Body = "
-<h1>Ola esse é um teste $usuNome</h1>
-<p></p>
+
+<h1>Olá $nome, seu codigo é:  </h1>
+<h2>$code</h2>
 "; 
 
 // Opcional: Anexos 
@@ -73,12 +66,6 @@ $mail->Body = "
 $enviado = $mail->Send(); 
 
 // Exibe uma mensagem de resultado 
-if ($enviado) 
-{ 
-    echo "Seu email foi enviado com sucesso!"; 
-} else { 
-    echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
-} 
 
 
 ?>
